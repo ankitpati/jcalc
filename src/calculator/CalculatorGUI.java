@@ -63,6 +63,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         operation.setText("=");
 
         value.setEditable(false);
+        value.setMaximumSize(new java.awt.Dimension(75, 27));
         value.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 keyTypedHandler(evt);
@@ -204,7 +205,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         calculate.setText("=");
         calculate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calculateActionPerformed(evt);
+                calculationActionEventHandler(evt);
             }
         });
         calculate.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -216,7 +217,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         add.setText("+");
         add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addActionPerformed(evt);
+                calculationActionEventHandler(evt);
             }
         });
         add.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -228,7 +229,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         sub.setText("-");
         sub.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                subActionPerformed(evt);
+                calculationActionEventHandler(evt);
             }
         });
         sub.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -240,7 +241,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         mul.setText("✕");
         mul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mulActionPerformed(evt);
+                calculationActionEventHandler(evt);
             }
         });
         mul.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -252,7 +253,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         div.setText("/");
         div.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                divActionPerformed(evt);
+                calculationActionEventHandler(evt);
             }
         });
         div.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -294,7 +295,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(operation))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(num4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -320,7 +321,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(decimalPoint))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(value)
+                                .addComponent(value, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(eraseToLeft)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -425,124 +426,14 @@ public class CalculatorGUI extends javax.swing.JFrame {
         operation.setText("=");
     }//GEN-LAST:event_clearActionPerformed
 
-    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
-        String orig;
-        
-        orig = value.getText();
-        
-        if("".equals(orig)){
-            value.setText("+");
-            return;
-        }
-
-        try{
-            Double.parseDouble(orig);
-        }
-        catch(NumberFormatException nfe){
-            javax.swing.JOptionPane.showMessageDialog(this, "Enter a valid number.");
-            return;
-        }
-        
-        storedValue.setText(orig);
-        operation.setText("+");
-        value.setText("");
-    }//GEN-LAST:event_addActionPerformed
-
-    private void subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subActionPerformed
-        String orig;
-        
-        orig = value.getText();
-        
-        if("".equals(orig)){
-            value.setText("-");
-            return;
-        }
-
-        try{
-            Double.parseDouble(orig);
-        }
-        catch(NumberFormatException nfe){
-            javax.swing.JOptionPane.showMessageDialog(this, "Enter a valid number.");
-            return;
-        }
-        
-        storedValue.setText(orig);
-        operation.setText("-");
-        value.setText("");
-    }//GEN-LAST:event_subActionPerformed
-
-    private void mulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mulActionPerformed
-        if(!"".equals(value.getText())){
-            try{
-                Double.parseDouble(value.getText());
-            }
-            catch(NumberFormatException nfe){
-                javax.swing.JOptionPane.showMessageDialog(this, "Enter a valid number.");
-                return;
-            }
-            storedValue.setText(value.getText());
-        }
-        else storedValue.setText("0.0");
-
-        operation.setText("*");
-        value.setText("");
-    }//GEN-LAST:event_mulActionPerformed
-
-    private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
-        if(!"".equals(value.getText())){
-            try{
-                Double.parseDouble(value.getText());
-            }
-            catch(NumberFormatException nfe){
-                javax.swing.JOptionPane.showMessageDialog(this, "Enter a valid number.");
-                return;
-            }
-            storedValue.setText(value.getText());
-        }
-        else storedValue.setText("0.0");
-
-        operation.setText("/");
-        value.setText("");
-    }//GEN-LAST:event_divActionPerformed
-
-    private void calculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateActionPerformed
-        double previousValue, currentValue, result;
-        
-        try{
-            previousValue = Double.parseDouble(storedValue.getText());
-            currentValue = Double.parseDouble(value.getText());
-        }
-        catch(NumberFormatException nfe){
-            javax.swing.JOptionPane.showMessageDialog(this, "Enter a valid number.");
-            return;
-        }
-                
-        switch(operation.getText()){
-        case "+":
-            result = previousValue + currentValue;
-            break;
-        case "-":
-            result = previousValue - currentValue;
-            break;
-        case "*":
-            result = previousValue * currentValue;
-            break;
-        case "/":
-            result = previousValue / currentValue;
-            break;
-        default:
-            result = 0.0;
-            break;
-        }
-        
-        storedValue.setText(String.valueOf(result));
-        value.setText(String.valueOf(result));
-        
-        operation.setText("=");
-    }//GEN-LAST:event_calculateActionPerformed
-
     private void decimalPointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decimalPointActionPerformed
-        value.setText(value.getText() + '.');
+        int i;
+        String orig;
+        
+        orig = value.getText();
+        
+        for(i = 0; i < orig.length() && orig.charAt(i) != '.'; ++i);
+        if(i == orig.length()) value.setText(orig + '.');
     }//GEN-LAST:event_decimalPointActionPerformed
 
     private void keyTypedHandler(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_keyTypedHandler
@@ -597,7 +488,9 @@ public class CalculatorGUI extends javax.swing.JFrame {
         case '-':
             sub.doClick();
             break;
-        case '*':
+        case '*': /* intended fall-through */
+        case 'x':
+        case 'X':
             mul.doClick();
             break;
         case '/':
@@ -617,6 +510,55 @@ public class CalculatorGUI extends javax.swing.JFrame {
         value.setText(orig.substring(0, orig.length() - 1));
     }//GEN-LAST:event_eraseToLeftActionPerformed
 
+    private void calculationActionEventHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculationActionEventHandler
+        double previousValue, currentValue;
+        String orig, command, previousCommand;
+        
+        orig = value.getText();
+        command = evt.getActionCommand();
+        previousCommand = operation.getText();
+
+        if("".equals(orig)){
+            if("-".equals(command)) value.setText(command);
+            else operation.setText(command);
+            return;
+        }
+
+        try{
+            previousValue = Double.parseDouble(storedValue.getText());
+            currentValue = Double.parseDouble(orig);
+        }
+        catch(NumberFormatException nfe){
+            javax.swing.JOptionPane.showMessageDialog(this, "Enter a valid number.");
+            return;
+        }
+
+        value.setText("");
+        
+        switch(previousCommand){
+        case "+":
+            previousValue += currentValue;
+            break;
+        case "-":
+            previousValue -= currentValue;
+            break;
+        case "\u2715":
+            previousValue *= currentValue;
+            break;
+        case "/":
+            previousValue /= currentValue;
+            break;
+        case "=":
+            previousValue = currentValue;
+            break;
+        }
+
+        operation.setText(command);
+        storedValue.setText(String.valueOf(previousValue));
+        
+        if("=".equals(command)) value.setText(String.valueOf(previousValue));        
+    }//GEN-LAST:event_calculationActionEventHandler
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

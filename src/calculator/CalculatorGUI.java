@@ -1,22 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* CalculatorGUI.java */
+/* Simple Swing Calculator
+ *
+ * Copyright 2016 Ankit Pati <ankitpati@gmail.com>
+ *
+ * This  software is  free software;  you can redistribute it and/or  modify  it
+ * under the terms of the  GNU Lesser General Public License as published by the
+ * Free Software Foundation;  either  version 3  of the  License,  or  (at  your
+ * option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful, but  WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more
+ * details.
+ *
+ * You  should  have received a copy of the GNU Lesser  General  Public  License
+ * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 package calculator;
 
-import javax.swing.JDialog;
-import javax.swing.SwingUtilities;
-
-/**
- *
- * @author ankitpati
- */
 public class CalculatorGUI extends javax.swing.JFrame {
-
-    /**
-     * Creates new form CalculatorGUI
-     */
+    final static long serialVersionUID = 0l;
+    
     public CalculatorGUI() {
         initComponents();
     }
@@ -50,6 +54,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         div = new javax.swing.JButton();
         storedValue = new javax.swing.JLabel();
         decimalPoint = new javax.swing.JButton();
+        eraseToLeft = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
@@ -57,10 +62,22 @@ public class CalculatorGUI extends javax.swing.JFrame {
 
         operation.setText("=");
 
+        value.setEditable(false);
+        value.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
+            }
+        });
+
         num1.setText("1");
         num1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 num1ActionPerformed(evt);
+            }
+        });
+        num1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
             }
         });
 
@@ -70,11 +87,21 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 num2ActionPerformed(evt);
             }
         });
+        num2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
+            }
+        });
 
         num3.setText("3");
         num3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 num3ActionPerformed(evt);
+            }
+        });
+        num3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
             }
         });
 
@@ -84,11 +111,21 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 num4ActionPerformed(evt);
             }
         });
+        num4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
+            }
+        });
 
         num5.setText("5");
         num5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 num5ActionPerformed(evt);
+            }
+        });
+        num5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
             }
         });
 
@@ -98,11 +135,21 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 num6ActionPerformed(evt);
             }
         });
+        num6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
+            }
+        });
 
         num7.setText("7");
         num7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 num7ActionPerformed(evt);
+            }
+        });
+        num7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
             }
         });
 
@@ -112,6 +159,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 num8ActionPerformed(evt);
             }
         });
+        num8.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
+            }
+        });
 
         num9.setText("9");
         num9.addActionListener(new java.awt.event.ActionListener() {
@@ -119,11 +171,21 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 num9ActionPerformed(evt);
             }
         });
+        num9.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
+            }
+        });
 
-        clear.setText("✕");
+        clear.setText("c");
         clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearActionPerformed(evt);
+            }
+        });
+        clear.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
             }
         });
 
@@ -133,11 +195,21 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 num0ActionPerformed(evt);
             }
         });
+        num0.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
+            }
+        });
 
         calculate.setText("=");
         calculate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calculateActionPerformed(evt);
+            }
+        });
+        calculate.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
             }
         });
 
@@ -147,6 +219,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 addActionPerformed(evt);
             }
         });
+        add.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
+            }
+        });
 
         sub.setText("-");
         sub.addActionListener(new java.awt.event.ActionListener() {
@@ -154,11 +231,21 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 subActionPerformed(evt);
             }
         });
+        sub.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
+            }
+        });
 
-        mul.setText("*");
+        mul.setText("✕");
         mul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mulActionPerformed(evt);
+            }
+        });
+        mul.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
             }
         });
 
@@ -168,6 +255,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 divActionPerformed(evt);
             }
         });
+        div.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
+            }
+        });
 
         storedValue.setText("0.0");
 
@@ -175,6 +267,18 @@ public class CalculatorGUI extends javax.swing.JFrame {
         decimalPoint.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 decimalPointActionPerformed(evt);
+            }
+        });
+        decimalPoint.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
+            }
+        });
+
+        eraseToLeft.setText("⌫");
+        eraseToLeft.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eraseToLeftActionPerformed(evt);
             }
         });
 
@@ -190,35 +294,35 @@ public class CalculatorGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(operation))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(num1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num3))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(num4)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num5)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num6))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(num7)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num8)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num9))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(clear)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num0)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(decimalPoint))))
-                            .addComponent(value))
+                                .addComponent(num4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(num5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(num6))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(num7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(num8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(num9))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(num1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(num2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(num3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(clear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(num0)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(decimalPoint))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(value)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(eraseToLeft)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(add)
@@ -241,7 +345,8 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(calculate))
+                    .addComponent(calculate)
+                    .addComponent(eraseToLeft))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(num1)
@@ -321,35 +426,47 @@ public class CalculatorGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_clearActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
-        if(!"".equals(value.getText())){
-            try{
-                Double.parseDouble(value.getText());
-            }
-            catch(NumberFormatException nfe){
-                javax.swing.JOptionPane.showMessageDialog(this, "Enter a valid number.");
-                return;
-            }
-            storedValue.setText(value.getText());
+        String orig;
+        
+        orig = value.getText();
+        
+        if("".equals(orig)){
+            value.setText("+");
+            return;
         }
-        else storedValue.setText("0.0");
 
+        try{
+            Double.parseDouble(orig);
+        }
+        catch(NumberFormatException nfe){
+            javax.swing.JOptionPane.showMessageDialog(this, "Enter a valid number.");
+            return;
+        }
+        
+        storedValue.setText(orig);
         operation.setText("+");
         value.setText("");
     }//GEN-LAST:event_addActionPerformed
 
     private void subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subActionPerformed
-        if(!"".equals(value.getText())){
-            try{
-                Double.parseDouble(value.getText());
-            }
-            catch(NumberFormatException nfe){
-                javax.swing.JOptionPane.showMessageDialog(this, "Enter a valid number.");
-                return;
-            }
-            storedValue.setText(value.getText());
+        String orig;
+        
+        orig = value.getText();
+        
+        if("".equals(orig)){
+            value.setText("-");
+            return;
         }
-        else storedValue.setText("0.0");
 
+        try{
+            Double.parseDouble(orig);
+        }
+        catch(NumberFormatException nfe){
+            javax.swing.JOptionPane.showMessageDialog(this, "Enter a valid number.");
+            return;
+        }
+        
+        storedValue.setText(orig);
         operation.setText("-");
         value.setText("");
     }//GEN-LAST:event_subActionPerformed
@@ -428,9 +545,78 @@ public class CalculatorGUI extends javax.swing.JFrame {
         value.setText(value.getText() + '.');
     }//GEN-LAST:event_decimalPointActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void keyTypedHandler(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_keyTypedHandler
+        switch(evt.getKeyChar()){
+        case '1':
+            num1.doClick();
+            break;
+        case '2':
+            num2.doClick();
+            break;
+        case '3':
+            num3.doClick();
+            break;
+        case '4':
+            num4.doClick();
+            break;
+        case '5':
+            num5.doClick();
+            break;
+        case '6':
+            num6.doClick();
+            break;
+        case '7':
+            num8.doClick();
+            break;
+        case '8':
+            num8.doClick();
+            break;
+        case '9':
+            num9.doClick();
+            break;
+        case '0':
+            num0.doClick();
+            break;
+        case '.':
+            decimalPoint.doClick();
+            break;
+        case '=':   /* intended fall-through */
+        case '\n':
+            calculate.doClick();
+            break;
+        case '\b':
+            eraseToLeft.doClick();
+            break;
+        case 'c':   /* intended fall-through */
+        case 'C':
+            clear.doClick();
+            break;
+        case '+':
+            add.doClick();
+            break;
+        case '-':
+            sub.doClick();
+            break;
+        case '*':
+            mul.doClick();
+            break;
+        case '/':
+            div.doClick();
+            break;
+        default:
+            break;
+        }
+    }//GEN-LAST:event_keyTypedHandler
+
+    private void eraseToLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eraseToLeftActionPerformed
+        String orig;
+        
+        orig = value.getText();
+        if(orig.length() == 0) return;
+
+        value.setText(orig.substring(0, orig.length() - 1));
+    }//GEN-LAST:event_eraseToLeftActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -456,11 +642,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CalculatorGUI().setVisible(true);
-            }
-        });
+        java.awt.EventQueue.invokeLater(() -> new CalculatorGUI().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -469,6 +651,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private javax.swing.JButton clear;
     private javax.swing.JButton decimalPoint;
     private javax.swing.JButton div;
+    private javax.swing.JButton eraseToLeft;
     private javax.swing.JButton mul;
     private javax.swing.JButton num0;
     private javax.swing.JButton num1;
@@ -486,3 +669,4 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private javax.swing.JTextField value;
     // End of variables declaration//GEN-END:variables
 }
+/* end of CalculatorGUI.java */

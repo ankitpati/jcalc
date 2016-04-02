@@ -55,6 +55,9 @@ public class CalculatorGUI extends javax.swing.JFrame {
         storedValue = new javax.swing.JLabel();
         decimalPoint = new javax.swing.JButton();
         eraseToLeft = new javax.swing.JButton();
+        exponentConstant = new javax.swing.JButton();
+        power = new javax.swing.JButton();
+        root = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
@@ -63,7 +66,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         operation.setText("=");
 
         value.setEditable(false);
-        value.setMaximumSize(new java.awt.Dimension(75, 27));
+        value.setMaximumSize(new java.awt.Dimension(110, 27));
         value.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 keyTypedHandler(evt);
@@ -283,58 +286,104 @@ public class CalculatorGUI extends javax.swing.JFrame {
             }
         });
 
+        exponentConstant.setText("E");
+        exponentConstant.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exponentConstantActionPerformed(evt);
+            }
+        });
+        exponentConstant.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
+            }
+        });
+
+        power.setText("^");
+        power.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calculationActionEventHandler(evt);
+            }
+        });
+        power.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
+            }
+        });
+
+        root.setText("√");
+        root.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calculationActionEventHandler(evt);
+            }
+        });
+        root.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(storedValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(operation))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(num4)
+                                .addComponent(calculate)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(num5)
+                                .addComponent(exponentConstant)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(num6))
+                                .addComponent(power)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(root))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(num7)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(num4)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(num5)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(num6))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(num7)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(num8)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(num9))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(num1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(num2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(num3))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(clear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(num0)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(decimalPoint)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(num8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(num9))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(num1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(num2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(num3))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(clear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(num0)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(decimalPoint))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(add)
+                                    .addComponent(sub)
+                                    .addComponent(mul)
+                                    .addComponent(div)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(value, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(value, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(eraseToLeft)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(add)
-                            .addComponent(sub)
-                            .addComponent(mul)
-                            .addComponent(div)
-                            .addComponent(calculate))))
+                                .addComponent(eraseToLeft)))))
                 .addContainerGap())
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {add, calculate, clear, decimalPoint, div, mul, num0, num1, num2, num3, num4, num5, num6, num7, num8, num9, sub});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {add, calculate, clear, decimalPoint, div, exponentConstant, mul, num0, num1, num2, num3, num4, num5, num6, num7, num8, num9, power, root, sub});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -346,8 +395,13 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(calculate)
                     .addComponent(eraseToLeft))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(calculate)
+                    .addComponent(exponentConstant)
+                    .addComponent(power)
+                    .addComponent(root))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(num1)
@@ -375,7 +429,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {add, calculate, clear, decimalPoint, div, mul, num0, num1, num2, num3, num4, num5, num6, num7, num8, num9, sub, value});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {add, calculate, clear, decimalPoint, div, exponentConstant, mul, num0, num1, num2, num3, num4, num5, num6, num7, num8, num9, power, root, sub, value});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -429,9 +483,9 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private void decimalPointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decimalPointActionPerformed
         int i;
         String orig;
-        
+
         orig = value.getText();
-        
+
         for(i = 0; i < orig.length() && orig.charAt(i) != '.'; ++i);
         if(i == orig.length()) value.setText(orig + '.');
     }//GEN-LAST:event_decimalPointActionPerformed
@@ -471,6 +525,10 @@ public class CalculatorGUI extends javax.swing.JFrame {
         case '.':
             decimalPoint.doClick();
             break;
+        case 'e':   /* intended fall-through */
+        case 'E':
+            exponentConstant.doClick();
+            break;
         case '=':   /* intended fall-through */
         case '\n':
             calculate.doClick();
@@ -488,13 +546,19 @@ public class CalculatorGUI extends javax.swing.JFrame {
         case '-':
             sub.doClick();
             break;
-        case '*': /* intended fall-through */
+        case '*':   /* intended fall-through */
         case 'x':
         case 'X':
             mul.doClick();
             break;
         case '/':
             div.doClick();
+            break;
+        case '^':
+            power.doClick();
+            break;
+        case 'r':
+            root.doClick();
             break;
         default:
             break;
@@ -503,7 +567,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
 
     private void eraseToLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eraseToLeftActionPerformed
         String orig;
-        
+
         orig = value.getText();
         if(orig.length() == 0) return;
 
@@ -513,7 +577,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private void calculationActionEventHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculationActionEventHandler
         double previousValue, currentValue;
         String orig, command, previousCommand;
-        
+
         orig = value.getText();
         command = evt.getActionCommand();
         previousCommand = operation.getText();
@@ -534,7 +598,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         }
 
         value.setText("");
-        
+
         switch(previousCommand){
         case "+":
             previousValue += currentValue;
@@ -548,6 +612,12 @@ public class CalculatorGUI extends javax.swing.JFrame {
         case "/":
             previousValue /= currentValue;
             break;
+        case "^":
+            previousValue = Math.pow(previousValue, currentValue);
+            break;
+        case "\u221a":
+            previousValue = Math.pow(currentValue, 1.0 / previousValue);
+            break;
         case "=":
             previousValue = currentValue;
             break;
@@ -555,9 +625,19 @@ public class CalculatorGUI extends javax.swing.JFrame {
 
         operation.setText(command);
         storedValue.setText(String.valueOf(previousValue));
-        
-        if("=".equals(command)) value.setText(String.valueOf(previousValue));        
+
+        if("=".equals(command)) value.setText(String.valueOf(previousValue));
     }//GEN-LAST:event_calculationActionEventHandler
+
+    private void exponentConstantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exponentConstantActionPerformed
+        int i;
+        String orig;
+
+        orig = value.getText();
+
+        for(i = 0; i < orig.length() && orig.charAt(i) != 'E'; ++i);
+        if(i == orig.length()) value.setText(orig + 'E');
+    }//GEN-LAST:event_exponentConstantActionPerformed
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -594,6 +674,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private javax.swing.JButton decimalPoint;
     private javax.swing.JButton div;
     private javax.swing.JButton eraseToLeft;
+    private javax.swing.JButton exponentConstant;
     private javax.swing.JButton mul;
     private javax.swing.JButton num0;
     private javax.swing.JButton num1;
@@ -606,6 +687,8 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private javax.swing.JButton num8;
     private javax.swing.JButton num9;
     private javax.swing.JLabel operation;
+    private javax.swing.JButton power;
+    private javax.swing.JButton root;
     private javax.swing.JLabel storedValue;
     private javax.swing.JButton sub;
     private javax.swing.JTextField value;

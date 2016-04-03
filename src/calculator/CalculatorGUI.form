@@ -39,13 +39,18 @@
                           <Group type="102" attributes="0">
                               <Component id="calculate" linkSize="1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="exponentConstant" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="clear" linkSize="1" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="power" linkSize="1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="root" linkSize="1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="value" min="-2" pref="119" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="eraseToLeft" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="num4" linkSize="1" min="-2" max="-2" attributes="0"/>
@@ -69,7 +74,7 @@
                                       <Component id="num3" linkSize="1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="clear" linkSize="1" max="32767" attributes="0"/>
+                                      <Component id="exponentConstant" linkSize="1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="num0" linkSize="1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -83,11 +88,6 @@
                                   <Component id="mul" linkSize="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="div" linkSize="1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="value" min="-2" pref="119" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="eraseToLeft" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -112,9 +112,9 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="calculate" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="exponentConstant" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="power" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="root" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="clear" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -139,10 +139,10 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="clear" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="num0" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="div" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="decimalPoint" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="exponentConstant" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>

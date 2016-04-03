@@ -16,13 +16,37 @@
  * You  should  have received a copy of the GNU Lesser  General  Public  License
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
+
 package calculator;
 
 public class CalculatorGUI extends javax.swing.JFrame {
     final static long serialVersionUID = 0l;
-    
+
     public CalculatorGUI() {
         initComponents();
+
+        /* setting and unsetting ENTER keybindings */
+        getRootPane().setDefaultButton(calculate);
+        add.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        clear.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        decimalPoint.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        div.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        eraseToLeft.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        exponentConstant.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        mul.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        num0.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        num1.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        num2.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        num3.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        num4.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        num5.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        num6.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        num7.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        num8.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        num9.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        power.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        root.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        sub.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
     }
 
     /**
@@ -266,6 +290,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         storedValue.setText("0.0");
+        storedValue.setMaximumSize(new java.awt.Dimension(154, 15));
 
         decimalPoint.setText(".");
         decimalPoint.addActionListener(new java.awt.event.ActionListener() {
@@ -391,7 +416,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(operation)
-                    .addComponent(storedValue))
+                    .addComponent(storedValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -486,7 +511,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
 
         orig = value.getText();
 
-        for(i = 0; i < orig.length() && orig.charAt(i) != '.'; ++i);
+        for(i = 0; i < orig.length() && orig.charAt(i) != '.' && orig.charAt(i) != 'E'; ++i);
         if(i == orig.length()) value.setText(orig + '.');
     }//GEN-LAST:event_decimalPointActionPerformed
 
@@ -529,8 +554,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
         case 'E':
             exponentConstant.doClick();
             break;
-        case '=':   /* intended fall-through */
-        case '\n':
+        case '=':
             calculate.doClick();
             break;
         case '\b':
@@ -582,8 +606,8 @@ public class CalculatorGUI extends javax.swing.JFrame {
         command = evt.getActionCommand();
         previousCommand = operation.getText();
 
-        if("".equals(orig)){
-            if("-".equals(command)) value.setText(command);
+        if("".equals(orig) || orig.charAt(orig.length() - 1) == 'E'){
+            if("-".equals(command)) value.setText(orig + '-');
             else operation.setText(command);
             return;
         }
@@ -635,6 +659,8 @@ public class CalculatorGUI extends javax.swing.JFrame {
 
         orig = value.getText();
 
+        if("".equals(orig)) return;
+        
         for(i = 0; i < orig.length() && orig.charAt(i) != 'E'; ++i);
         if(i == orig.length()) value.setText(orig + 'E');
     }//GEN-LAST:event_exponentConstantActionPerformed

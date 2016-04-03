@@ -90,7 +90,6 @@ public class CalculatorGUI extends javax.swing.JFrame {
         operation.setText("=");
 
         value.setEditable(false);
-        value.setMaximumSize(new java.awt.Dimension(110, 27));
         value.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 keyTypedHandler(evt);
@@ -290,7 +289,6 @@ public class CalculatorGUI extends javax.swing.JFrame {
         });
 
         storedValue.setText("0.0");
-        storedValue.setMaximumSize(new java.awt.Dimension(154, 15));
 
         decimalPoint.setText(".");
         decimalPoint.addActionListener(new java.awt.event.ActionListener() {
@@ -414,7 +412,7 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(operation)
-                    .addComponent(storedValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(storedValue))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)

@@ -604,12 +604,12 @@ public class SimpleCalculator extends javax.swing.JFrame {
 
         if("".equals(orig) || orig.charAt(orig.length() - 1) == 'E'){
             if("-".equals(command)) value.setText(orig + '-');
-            else operation.setText(command);
+            else if(!"=".equals(command)) operation.setText(command);
             return;
         }
 
         if(orig.charAt(orig.length() - 1) == '-'){
-            operation.setText(command);
+            if(!"=".equals(command)) operation.setText(command);
             return;
         }
 
@@ -661,6 +661,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         orig = value.getText();
 
         if("".equals(orig)) return;
+        if("-".equals(orig)) return;
         
         for(i = 0; i < orig.length() && orig.charAt(i) != 'E'; ++i);
         if(i == orig.length()) value.setText(orig + 'E');

@@ -1,4 +1,4 @@
-/* CalculatorGUI.java */
+/* SimpleCalculator.java */
 /* Simple Swing Calculator
  *
  * Copyright 2016 Ankit Pati <ankitpati@gmail.com>
@@ -17,12 +17,12 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-package calculator;
+package jcalc;
 
-public class CalculatorGUI extends javax.swing.JFrame {
+public class SimpleCalculator extends javax.swing.JFrame {
     final static long serialVersionUID = 0l;
 
-    public CalculatorGUI() {
+    public SimpleCalculator() {
         initComponents();
 
         /* setting and unsetting ENTER keybindings */
@@ -608,6 +608,11 @@ public class CalculatorGUI extends javax.swing.JFrame {
             return;
         }
 
+        if(orig.charAt(orig.length() - 1) == '-'){
+            operation.setText(command);
+            return;
+        }
+
         try{
             previousValue = Double.parseDouble(storedValue.getText());
             currentValue = Double.parseDouble(orig);
@@ -675,18 +680,19 @@ public class CalculatorGUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CalculatorGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SimpleCalculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CalculatorGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SimpleCalculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CalculatorGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SimpleCalculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CalculatorGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SimpleCalculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new CalculatorGUI().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new SimpleCalculator().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -716,4 +722,4 @@ public class CalculatorGUI extends javax.swing.JFrame {
     private javax.swing.JTextField value;
     // End of variables declaration//GEN-END:variables
 }
-/* end of CalculatorGUI.java */
+/* end of SimpleCalculator.java */

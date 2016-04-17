@@ -565,12 +565,8 @@ public class SimpleCalculator extends javax.swing.JFrame {
     private void exponentConstantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exponentConstantActionPerformed
         int i;
         String orig;
-
         orig = value.getText();
-
-        if("".equals(orig)) return;
-        if("-".equals(orig)) return;
-        
+        if("".equals(orig) || "-".equals(orig) || orig.contains("I") || orig.contains("N")) return;
         if(!orig.contains("E")) value.setText(orig + 'E');
     }//GEN-LAST:event_exponentConstantActionPerformed
 

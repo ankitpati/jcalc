@@ -115,7 +115,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         num6.setText("6");
         num6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num6ActionPerformed(evt);
+                numActionPerformedHandler(evt);
             }
         });
         num6.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -127,7 +127,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         num2.setText("2");
         num2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num2ActionPerformed(evt);
+                numActionPerformedHandler(evt);
             }
         });
         num2.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -208,7 +208,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         num0.setText("0");
         num0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num0ActionPerformed(evt);
+                numActionPerformedHandler(evt);
             }
         });
         num0.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -220,7 +220,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         num3.setText("3");
         num3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num3ActionPerformed(evt);
+                numActionPerformedHandler(evt);
             }
         });
         num3.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -234,7 +234,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         num1.setText("1");
         num1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num1ActionPerformed(evt);
+                numActionPerformedHandler(evt);
             }
         });
         num1.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -253,7 +253,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         num9.setText("9");
         num9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num9ActionPerformed(evt);
+                numActionPerformedHandler(evt);
             }
         });
         num9.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -265,7 +265,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         num7.setText("7");
         num7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num7ActionPerformed(evt);
+                numActionPerformedHandler(evt);
             }
         });
         num7.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -289,7 +289,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         num5.setText("5");
         num5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num5ActionPerformed(evt);
+                numActionPerformedHandler(evt);
             }
         });
         num5.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -301,7 +301,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         num4.setText("4");
         num4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num4ActionPerformed(evt);
+                numActionPerformedHandler(evt);
             }
         });
         num4.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -337,7 +337,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         num8.setText("8");
         num8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num8ActionPerformed(evt);
+                numActionPerformedHandler(evt);
             }
         });
         num8.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -473,46 +473,6 @@ public class SimpleCalculator extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void num1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num1ActionPerformed
-        value.setText(value.getText() + '1');
-    }//GEN-LAST:event_num1ActionPerformed
-
-    private void num2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num2ActionPerformed
-        value.setText(value.getText() + '2');
-    }//GEN-LAST:event_num2ActionPerformed
-
-    private void num3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num3ActionPerformed
-        value.setText(value.getText() + '3');
-    }//GEN-LAST:event_num3ActionPerformed
-
-    private void num4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num4ActionPerformed
-        value.setText(value.getText() + '4');
-    }//GEN-LAST:event_num4ActionPerformed
-
-    private void num5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num5ActionPerformed
-        value.setText(value.getText() + '5');
-    }//GEN-LAST:event_num5ActionPerformed
-
-    private void num6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num6ActionPerformed
-        value.setText(value.getText() + '6');
-    }//GEN-LAST:event_num6ActionPerformed
-
-    private void num7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num7ActionPerformed
-        value.setText(value.getText() + '7');
-    }//GEN-LAST:event_num7ActionPerformed
-
-    private void num8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num8ActionPerformed
-        value.setText(value.getText() + '8');
-    }//GEN-LAST:event_num8ActionPerformed
-
-    private void num9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num9ActionPerformed
-        value.setText(value.getText() + '9');
-    }//GEN-LAST:event_num9ActionPerformed
-
-    private void num0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num0ActionPerformed
-        value.setText(value.getText() + '0');
-    }//GEN-LAST:event_num0ActionPerformed
-
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
         value.setText("");
         storedValue.setText("0.0");
@@ -636,7 +596,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
             currentValue = Double.parseDouble(orig);
         }
         catch(NumberFormatException nfe){
-            javax.swing.JOptionPane.showMessageDialog(this, "Enter a valid number.");
+            javax.swing.JOptionPane.showMessageDialog(this, "Invalid Number!\nPress C to clear the input.");
             return;
         }
 
@@ -684,6 +644,15 @@ public class SimpleCalculator extends javax.swing.JFrame {
         for(i = 0; i < orig.length() && orig.charAt(i) != 'E'; ++i);
         if(i == orig.length()) value.setText(orig + 'E');
     }//GEN-LAST:event_exponentConstantActionPerformed
+
+    private void numActionPerformedHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numActionPerformedHandler
+        switch(value.getText()){
+        case "Infinity": case "NaN":
+            value.setText("");
+            break;
+        }
+        value.setText(value.getText() + evt.getActionCommand());
+    }//GEN-LAST:event_numActionPerformedHandler
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

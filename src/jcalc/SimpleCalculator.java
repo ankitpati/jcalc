@@ -94,6 +94,11 @@ public class SimpleCalculator extends javax.swing.JFrame {
                 eraseToLeftActionPerformed(evt);
             }
         });
+        eraseToLeft.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                keyTypedHandler(evt);
+            }
+        });
 
         num5.setText("5");
         num5.addActionListener(new java.awt.event.ActionListener() {
@@ -555,10 +560,8 @@ public class SimpleCalculator extends javax.swing.JFrame {
 
     private void eraseToLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eraseToLeftActionPerformed
         String orig;
-
         orig = value.getText();
         if(orig.length() == 0) return;
-
         value.setText(orig.substring(0, orig.length() - 1));
     }//GEN-LAST:event_eraseToLeftActionPerformed
 

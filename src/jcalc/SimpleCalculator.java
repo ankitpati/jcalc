@@ -485,8 +485,15 @@ public class SimpleCalculator extends javax.swing.JFrame {
 
         orig = value.getText();
 
-        for(i = 0; i < orig.length() && orig.charAt(i) != '.' && orig.charAt(i) != 'E'; ++i);
-        if(i == orig.length()) value.setText(orig + '.');
+        if(orig.contains(".") || orig.contains("E")) return;
+        if(orig.contains("I") || orig.contains("N")) value.setText(orig = "");
+        /* Checking for these letters because
+            E = Exponent
+            I = Infinity
+            N = NaN
+        */
+
+        value.setText(orig + '.');
     }//GEN-LAST:event_decimalPointActionPerformed
 
     private void keyTypedHandler(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_keyTypedHandler
@@ -641,16 +648,11 @@ public class SimpleCalculator extends javax.swing.JFrame {
         if("".equals(orig)) return;
         if("-".equals(orig)) return;
         
-        for(i = 0; i < orig.length() && orig.charAt(i) != 'E'; ++i);
-        if(i == orig.length()) value.setText(orig + 'E');
+        if(!orig.contains("E")) value.setText(orig + 'E');
     }//GEN-LAST:event_exponentConstantActionPerformed
 
     private void numActionPerformedHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numActionPerformedHandler
-        switch(value.getText()){
-        case "Infinity": case "NaN":
-            value.setText("");
-            break;
-        }
+        if(value.getText().contains("I") || value.getText().contains("N")) value.setText("");
         value.setText(value.getText() + evt.getActionCommand());
     }//GEN-LAST:event_numActionPerformedHandler
     

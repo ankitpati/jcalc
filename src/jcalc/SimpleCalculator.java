@@ -91,7 +91,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         power.setText("^");
         power.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calculationActionEventHandler(evt);
+                calculationActionPerformedHandler(evt);
             }
         });
         power.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -139,7 +139,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         root.setText("√");
         root.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calculationActionEventHandler(evt);
+                calculationActionPerformedHandler(evt);
             }
         });
         root.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -153,7 +153,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         mul.setText("✕");
         mul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calculationActionEventHandler(evt);
+                calculationActionPerformedHandler(evt);
             }
         });
         mul.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -165,7 +165,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         div.setText("/");
         div.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calculationActionEventHandler(evt);
+                calculationActionPerformedHandler(evt);
             }
         });
         div.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -196,7 +196,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         sub.setText("-");
         sub.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calculationActionEventHandler(evt);
+                calculationActionPerformedHandler(evt);
             }
         });
         sub.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -277,7 +277,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         add.setText("+");
         add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calculationActionEventHandler(evt);
+                calculationActionPerformedHandler(evt);
             }
         });
         add.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -325,7 +325,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         calculate.setText("=");
         calculate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calculationActionEventHandler(evt);
+                calculationActionPerformedHandler(evt);
             }
         });
         calculate.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -579,7 +579,24 @@ public class SimpleCalculator extends javax.swing.JFrame {
         value.setText(orig.substring(0, orig.length() - 1));
     }//GEN-LAST:event_eraseToLeftActionPerformed
 
-    private void calculationActionEventHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculationActionEventHandler
+    private void exponentConstantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exponentConstantActionPerformed
+        int i;
+        String orig;
+
+        orig = value.getText();
+
+        if("".equals(orig)) return;
+        if("-".equals(orig)) return;
+        
+        if(!orig.contains("E")) value.setText(orig + 'E');
+    }//GEN-LAST:event_exponentConstantActionPerformed
+
+    private void numActionPerformedHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numActionPerformedHandler
+        if(value.getText().contains("I") || value.getText().contains("N")) value.setText("");
+        value.setText(value.getText() + evt.getActionCommand());
+    }//GEN-LAST:event_numActionPerformedHandler
+
+    private void calculationActionPerformedHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculationActionPerformedHandler
         double previousValue, currentValue;
         String orig, command, previousCommand;
 
@@ -637,24 +654,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         storedValue.setText(String.valueOf(previousValue));
 
         if("=".equals(command)) value.setText(String.valueOf(previousValue));
-    }//GEN-LAST:event_calculationActionEventHandler
-
-    private void exponentConstantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exponentConstantActionPerformed
-        int i;
-        String orig;
-
-        orig = value.getText();
-
-        if("".equals(orig)) return;
-        if("-".equals(orig)) return;
-        
-        if(!orig.contains("E")) value.setText(orig + 'E');
-    }//GEN-LAST:event_exponentConstantActionPerformed
-
-    private void numActionPerformedHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numActionPerformedHandler
-        if(value.getText().contains("I") || value.getText().contains("N")) value.setText("");
-        value.setText(value.getText() + evt.getActionCommand());
-    }//GEN-LAST:event_numActionPerformedHandler
+    }//GEN-LAST:event_calculationActionPerformedHandler
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

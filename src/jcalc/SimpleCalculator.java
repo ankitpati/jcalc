@@ -26,29 +26,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
 
     public SimpleCalculator() {
         initComponents();
-
-        /* setting and unsetting ENTER keybindings */
         getRootPane().setDefaultButton(calculate);
-        add.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        clear.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        decimalPoint.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        div.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        eraseToLeft.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        exponentConstant.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        mul.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        num0.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        num1.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        num2.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        num3.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        num4.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        num5.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        num6.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        num7.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        num8.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        num9.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        power.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        root.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
-        sub.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
     }
 
     /**
@@ -92,263 +70,179 @@ public class SimpleCalculator extends javax.swing.JFrame {
         setResizable(false);
 
         eraseToLeft.setText("⌫");
+        eraseToLeft.setFocusable(false);
         eraseToLeft.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eraseToLeftActionPerformed(evt);
             }
         });
-        eraseToLeft.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         num5.setText("5");
+        num5.setFocusable(false);
         num5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numActionPerformedHandler(evt);
             }
         });
-        num5.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         clear.setText("c");
+        clear.setFocusable(false);
         clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearActionPerformed(evt);
             }
         });
-        clear.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         num4.setText("4");
+        num4.setFocusable(false);
         num4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numActionPerformedHandler(evt);
             }
         });
-        num4.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         sub.setText("-");
+        sub.setFocusable(false);
         sub.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calculationActionPerformedHandler(evt);
             }
         });
-        sub.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         decimalPoint.setText(".");
+        decimalPoint.setFocusable(false);
         decimalPoint.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 decimalPointActionPerformed(evt);
             }
         });
-        decimalPoint.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         num0.setText("0");
+        num0.setFocusable(false);
         num0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numActionPerformedHandler(evt);
             }
         });
-        num0.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         calculate.setText("=");
+        calculate.setFocusable(false);
         calculate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calculationActionPerformedHandler(evt);
             }
         });
-        calculate.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         num3.setText("3");
+        num3.setFocusable(false);
         num3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numActionPerformedHandler(evt);
             }
         });
-        num3.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         num8.setText("8");
+        num8.setFocusable(false);
         num8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numActionPerformedHandler(evt);
             }
         });
-        num8.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         num1.setText("1");
+        num1.setFocusable(false);
         num1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numActionPerformedHandler(evt);
-            }
-        });
-        num1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
             }
         });
 
         value.setEditable(false);
         value.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
+                valueKeyTyped(evt);
             }
         });
 
         num9.setText("9");
+        num9.setFocusable(false);
         num9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numActionPerformedHandler(evt);
             }
         });
-        num9.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         power.setText("^");
+        power.setFocusable(false);
         power.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calculationActionPerformedHandler(evt);
             }
         });
-        power.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         exponentConstant.setText("E");
+        exponentConstant.setFocusable(false);
         exponentConstant.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exponentConstantActionPerformed(evt);
             }
         });
-        exponentConstant.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         num6.setText("6");
+        num6.setFocusable(false);
         num6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numActionPerformedHandler(evt);
             }
         });
-        num6.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         num2.setText("2");
+        num2.setFocusable(false);
         num2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numActionPerformedHandler(evt);
             }
         });
-        num2.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         root.setText("√");
+        root.setFocusable(false);
         root.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calculationActionPerformedHandler(evt);
-            }
-        });
-        root.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
             }
         });
 
         storedValue.setText("0.0");
 
         mul.setText("✕");
+        mul.setFocusable(false);
         mul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calculationActionPerformedHandler(evt);
             }
         });
-        mul.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         num7.setText("7");
+        num7.setFocusable(false);
         num7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numActionPerformedHandler(evt);
             }
         });
-        num7.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         div.setText("/");
+        div.setFocusable(false);
         div.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calculationActionPerformedHandler(evt);
             }
         });
-        div.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
-            }
-        });
 
         add.setText("+");
+        add.setFocusable(false);
         add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calculationActionPerformedHandler(evt);
-            }
-        });
-        add.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
             }
         });
 
@@ -360,11 +254,6 @@ public class SimpleCalculator extends javax.swing.JFrame {
         plaf.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 plafItemStateChanged(evt);
-            }
-        });
-        plaf.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                keyTypedHandler(evt);
             }
         });
 
@@ -504,80 +393,6 @@ public class SimpleCalculator extends javax.swing.JFrame {
         value.setText(orig + '.');
     }//GEN-LAST:event_decimalPointActionPerformed
 
-    private void keyTypedHandler(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_keyTypedHandler
-        switch(evt.getKeyChar()){
-        case '1':
-            num1.doClick();
-            break;
-        case '2':
-            num2.doClick();
-            break;
-        case '3':
-            num3.doClick();
-            break;
-        case '4':
-            num4.doClick();
-            break;
-        case '5':
-            num5.doClick();
-            break;
-        case '6':
-            num6.doClick();
-            break;
-        case '7':
-            num8.doClick();
-            break;
-        case '8':
-            num8.doClick();
-            break;
-        case '9':
-            num9.doClick();
-            break;
-        case '0':
-            num0.doClick();
-            break;
-        case '.':
-            decimalPoint.doClick();
-            break;
-        case 'e':   /* intended fall-through */
-        case 'E':
-            exponentConstant.doClick();
-            break;
-        case '=':
-            calculate.doClick();
-            break;
-        case '\b':
-            eraseToLeft.doClick();
-            break;
-        case 'c':   /* intended fall-through */
-        case 'C':
-            clear.doClick();
-            break;
-        case '+':
-            add.doClick();
-            break;
-        case '-':
-            sub.doClick();
-            break;
-        case '*':   /* intended fall-through */
-        case 'x':
-        case 'X':
-            mul.doClick();
-            break;
-        case '/':
-            div.doClick();
-            break;
-        case '^':
-            power.doClick();
-            break;
-        case 'r':
-            root.doClick();
-            break;
-        default:
-            break;
-        }
-    }//GEN-LAST:event_keyTypedHandler
-
     private void eraseToLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eraseToLeftActionPerformed
         String orig;
         orig = value.getText();
@@ -675,6 +490,80 @@ public class SimpleCalculator extends javax.swing.JFrame {
             }
         });
     }//GEN-LAST:event_plafItemStateChanged
+
+    private void valueKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_valueKeyTyped
+        switch(evt.getKeyChar()){
+        case '1':
+            num1.doClick();
+            break;
+        case '2':
+            num2.doClick();
+            break;
+        case '3':
+            num3.doClick();
+            break;
+        case '4':
+            num4.doClick();
+            break;
+        case '5':
+            num5.doClick();
+            break;
+        case '6':
+            num6.doClick();
+            break;
+        case '7':
+            num8.doClick();
+            break;
+        case '8':
+            num8.doClick();
+            break;
+        case '9':
+            num9.doClick();
+            break;
+        case '0':
+            num0.doClick();
+            break;
+        case '.':
+            decimalPoint.doClick();
+            break;
+        case 'e':   /* intended fall-through */
+        case 'E':
+            exponentConstant.doClick();
+            break;
+        case '=':
+            calculate.doClick();
+            break;
+        case '\b':
+            eraseToLeft.doClick();
+            break;
+        case 'c':   /* intended fall-through */
+        case 'C':
+            clear.doClick();
+            break;
+        case '+':
+            add.doClick();
+            break;
+        case '-':
+            sub.doClick();
+            break;
+        case '*':   /* intended fall-through */
+        case 'x':
+        case 'X':
+            mul.doClick();
+            break;
+        case '/':
+            div.doClick();
+            break;
+        case '^':
+            power.doClick();
+            break;
+        case 'r':
+            root.doClick();
+            break;
+        default:
+            break;
+        }
+    }//GEN-LAST:event_valueKeyTyped
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

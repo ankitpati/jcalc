@@ -154,100 +154,100 @@
     <Component class="javax.swing.JButton" name="eraseToLeft">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x232b;"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eraseToLeftActionPerformed"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="num5">
       <Properties>
         <Property name="text" type="java.lang.String" value="5"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="clear">
       <Properties>
         <Property name="text" type="java.lang.String" value="c"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearActionPerformed"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="num4">
       <Properties>
         <Property name="text" type="java.lang.String" value="4"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="sub">
       <Properties>
         <Property name="text" type="java.lang.String" value="-"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="decimalPoint">
       <Properties>
         <Property name="text" type="java.lang.String" value="."/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="decimalPointActionPerformed"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="num0">
       <Properties>
         <Property name="text" type="java.lang.String" value="0"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="calculate">
       <Properties>
         <Property name="text" type="java.lang.String" value="="/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="num3">
       <Properties>
         <Property name="text" type="java.lang.String" value="3"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="num8">
       <Properties>
         <Property name="text" type="java.lang.String" value="8"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="num1">
       <Properties>
         <Property name="text" type="java.lang.String" value="1"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="value">
@@ -255,61 +255,61 @@
         <Property name="editable" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="valueKeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="num9">
       <Properties>
         <Property name="text" type="java.lang.String" value="9"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="power">
       <Properties>
         <Property name="text" type="java.lang.String" value="^"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="exponentConstant">
       <Properties>
         <Property name="text" type="java.lang.String" value="E"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exponentConstantActionPerformed"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="num6">
       <Properties>
         <Property name="text" type="java.lang.String" value="6"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="num2">
       <Properties>
         <Property name="text" type="java.lang.String" value="2"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="root">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x221a;"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="storedValue">
@@ -320,37 +320,37 @@
     <Component class="javax.swing.JButton" name="mul">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x2715;"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="num7">
       <Properties>
         <Property name="text" type="java.lang.String" value="7"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="div">
       <Properties>
         <Property name="text" type="java.lang.String" value="/"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="add">
       <Properties>
         <Property name="text" type="java.lang.String" value="+"/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="operation">
@@ -374,7 +374,6 @@
       </Properties>
       <Events>
         <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="plafItemStateChanged"/>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="keyTypedHandler"/>
       </Events>
     </Component>
   </SubComponents>

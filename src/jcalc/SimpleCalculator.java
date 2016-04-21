@@ -19,6 +19,8 @@
 
 package jcalc;
 
+import javax.swing.*;
+
 public class SimpleCalculator extends javax.swing.JFrame {
     final static long serialVersionUID = 0l;
 
@@ -27,26 +29,26 @@ public class SimpleCalculator extends javax.swing.JFrame {
 
         /* setting and unsetting ENTER keybindings */
         getRootPane().setDefaultButton(calculate);
-        add.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        clear.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        decimalPoint.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        div.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        eraseToLeft.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        exponentConstant.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        mul.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        num0.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        num1.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        num2.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        num3.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        num4.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        num5.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        num6.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        num7.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        num8.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        num9.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        power.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        root.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
-        sub.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("ENTER"), "none");
+        add.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        clear.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        decimalPoint.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        div.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        eraseToLeft.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        exponentConstant.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        mul.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        num0.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        num1.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        num2.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        num3.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        num4.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        num5.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        num6.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        num7.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        num8.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        num9.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        power.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        root.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
+        sub.getInputMap().put(KeyStroke.getKeyStroke("ENTER"), "none");
     }
 
     /**
@@ -354,6 +356,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
 
         plaf.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nimbus", "Metal", "CDE/Motif", "GTK+", "Windows" }));
         plaf.setToolTipText("Look and Feel");
+        plaf.setFocusable(false);
         plaf.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 plafItemStateChanged(evt);
@@ -373,56 +376,55 @@ public class SimpleCalculator extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(plaf, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(storedValue, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(operation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(storedValue, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(calculate)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(operation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(calculate)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(clear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(power)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(root))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(value, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(eraseToLeft))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(num4)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num5)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num6))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(num7)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num8)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num9))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(num1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num3))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(exponentConstant)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(num0)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(decimalPoint)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(add)
-                                    .addComponent(sub)
-                                    .addComponent(mul)
-                                    .addComponent(div))))))
+                            .addComponent(clear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(power)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(root))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(value, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(eraseToLeft))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(num4)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(num5)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(num6))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(num7)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(num8)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(num9))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(num1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(num2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(num3))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(exponentConstant)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(num0)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(decimalPoint)))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(add)
+                                .addComponent(sub)
+                                .addComponent(mul)
+                                .addComponent(div)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -620,7 +622,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
             currentValue = Double.parseDouble(orig);
         }
         catch(NumberFormatException nfe){
-            javax.swing.JOptionPane.showMessageDialog(this, "Invalid Number!\nPress C to clear the input.");
+            JOptionPane.showMessageDialog(this, "Invalid Number!\nPress C to clear the input.");
             return;
         }
 
@@ -633,7 +635,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         case "-":
             previousValue -= currentValue;
             break;
-        case "\u2715":
+        case "✕":
             previousValue *= currentValue;
             break;
         case "/":
@@ -642,7 +644,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         case "^":
             previousValue = Math.pow(previousValue, currentValue);
             break;
-        case "\u221a":
+        case "√":
             previousValue = Math.pow(currentValue, 1.0 / previousValue);
             break;
         case "=":
@@ -657,15 +659,15 @@ public class SimpleCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_calculationActionPerformedHandler
 
     private void plafItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_plafItemStateChanged
-        javax.swing.SwingUtilities.invokeLater(() -> {
+        SwingUtilities.invokeLater(() -> {
             try {
-                for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                     if (plaf.getSelectedItem().equals(info.getName())) {
-                        javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                        UIManager.setLookAndFeel(info.getClassName());
                         break;
                     }
                 }
-                javax.swing.SwingUtilities.updateComponentTreeUI(this);
+                SwingUtilities.updateComponentTreeUI(this);
                 pack();
             }
             catch (Exception ex) {
@@ -673,12 +675,12 @@ public class SimpleCalculator extends javax.swing.JFrame {
             }
         });
     }//GEN-LAST:event_plafItemStateChanged
-    
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -700,7 +702,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new SimpleCalculator().setVisible(true));
+        SwingUtilities.invokeLater(() -> new SimpleCalculator().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

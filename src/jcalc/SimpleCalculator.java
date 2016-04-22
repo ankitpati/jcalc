@@ -27,6 +27,9 @@ public class SimpleCalculator extends JFrame {
     public SimpleCalculator() {
         initComponents();
         getRootPane().setDefaultButton(calculate);
+        for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) plaf.addItem(info.getName());
+        plaf.setSelectedItem("Nimbus");
+        setVisible(true);
     }
 
     /**
@@ -248,7 +251,6 @@ public class SimpleCalculator extends JFrame {
 
         operation.setText("=");
 
-        plaf.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nimbus", "Metal", "CDE/Motif", "GTK+", "Windows" }));
         plaf.setToolTipText("Look and Feel");
         plaf.setFocusable(false);
         plaf.addItemListener(new java.awt.event.ItemListener() {
@@ -565,20 +567,7 @@ public class SimpleCalculator extends JFrame {
     }//GEN-LAST:event_valueKeyTyped
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        try {
-            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels())
-                if ("Nimbus".equals(info.getName())) {
-                    UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-        }
-        catch (Exception ex) {
-            System.err.println("Cannot set Nimbus theme.");
-        }
-
-        /* Create and display the form */
-        SwingUtilities.invokeLater(() -> new SimpleCalculator().setVisible(true));
+        SimpleCalculator sc = new SimpleCalculator();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

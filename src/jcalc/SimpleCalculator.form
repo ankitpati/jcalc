@@ -360,15 +360,6 @@
     </Component>
     <Component class="javax.swing.JComboBox" name="plaf">
       <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="5">
-            <StringItem index="0" value="Nimbus"/>
-            <StringItem index="1" value="Metal"/>
-            <StringItem index="2" value="CDE/Motif"/>
-            <StringItem index="3" value="GTK+"/>
-            <StringItem index="4" value="Windows"/>
-          </StringArray>
-        </Property>
         <Property name="toolTipText" type="java.lang.String" value="Look and Feel"/>
         <Property name="focusable" type="boolean" value="false"/>
       </Properties>

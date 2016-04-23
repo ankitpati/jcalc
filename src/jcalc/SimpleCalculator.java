@@ -28,9 +28,12 @@ public class SimpleCalculator extends JFrame {
     public SimpleCalculator() {
         initComponents();
         getRootPane().setDefaultButton(calculate);
-        for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) plaf.addItem(info.getName());
-        plaf.setSelectedItem("Nimbus");
-        setVisible(true);
+        SwingUtilities.invokeLater(() -> {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) plaf.addItem(info.getName());
+            plaf.setSelectedItem("Nimbus");
+            setLocationRelativeTo(null);
+            setVisible(true);
+        });
     }
 
     /**
@@ -489,6 +492,7 @@ public class SimpleCalculator extends JFrame {
                     }
                 SwingUtilities.updateComponentTreeUI(this);
                 pack();
+                setLocationRelativeTo(null);
             }
             catch (Exception ex) {
                 System.err.println("Cannot set "+plaf.getSelectedItem()+" theme.");

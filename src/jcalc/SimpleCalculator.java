@@ -19,6 +19,7 @@
 
 package jcalc;
 
+import java.awt.event.*;
 import javax.swing.*;
 
 public class SimpleCalculator extends JFrame {
@@ -164,6 +165,9 @@ public class SimpleCalculator extends JFrame {
         value.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 valueKeyTyped(evt);
+            }
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                valueKeyPressed(evt);
             }
         });
 
@@ -493,7 +497,7 @@ public class SimpleCalculator extends JFrame {
     }//GEN-LAST:event_plafItemStateChanged
 
     private void valueKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_valueKeyTyped
-        switch(evt.getKeyChar()){
+        switch (evt.getKeyChar()) {
         case '1':
             num1.doClick();
             break;
@@ -565,6 +569,19 @@ public class SimpleCalculator extends JFrame {
             break;
         }
     }//GEN-LAST:event_valueKeyTyped
+
+    private void valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_valueKeyPressed
+        switch (evt.getKeyCode()) {
+        case KeyEvent.VK_UP:
+            plaf.setSelectedIndex((plaf.getSelectedIndex() == 0 ? plaf.getItemCount() : plaf.getSelectedIndex()) - 1);
+            break;
+        case KeyEvent.VK_DOWN:
+            plaf.setSelectedIndex(plaf.getSelectedIndex() == plaf.getItemCount() - 1 ? 0 : plaf.getSelectedIndex() + 1);
+            break;
+        default:
+            break;
+        }
+    }//GEN-LAST:event_valueKeyPressed
 
     public static void main(String args[]) {
         SimpleCalculator sc = new SimpleCalculator();

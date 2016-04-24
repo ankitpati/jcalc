@@ -391,8 +391,8 @@ public class SimpleCalculator extends JFrame {
 
         orig = value.getText();
 
-        if(orig.contains(".") || orig.contains("E")) return;
-        if(orig.contains("I") || orig.contains("N")) value.setText(orig = "");
+        if (orig.contains(".") || orig.contains("E")) return;
+        if (orig.contains("I") || orig.contains("N")) value.setText(orig = "");
         /* Checking for these letters because
             E = Exponent
             I = Infinity
@@ -405,7 +405,7 @@ public class SimpleCalculator extends JFrame {
     private void eraseToLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eraseToLeftActionPerformed
         String orig;
         orig = value.getText();
-        if(orig.length() == 0) return;
+        if (orig.length() == 0) return;
         value.setText(orig.substring(0, orig.length() - 1));
     }//GEN-LAST:event_eraseToLeftActionPerformed
 
@@ -413,12 +413,12 @@ public class SimpleCalculator extends JFrame {
         int i;
         String orig;
         orig = value.getText();
-        if("".equals(orig) || "-".equals(orig) || orig.contains("I") || orig.contains("N")) return;
-        if(!orig.contains("E")) value.setText(orig + 'E');
+        if ("".equals(orig) || "-".equals(orig) || orig.contains("I") || orig.contains("N")) return;
+        if (!orig.contains("E")) value.setText(orig + 'E');
     }//GEN-LAST:event_exponentConstantActionPerformed
 
     private void numActionPerformedHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numActionPerformedHandler
-        if(value.getText().contains("I") || value.getText().contains("N")) value.setText("");
+        if (value.getText().contains("I") || value.getText().contains("N")) value.setText("");
         value.setText(value.getText() + evt.getActionCommand());
     }//GEN-LAST:event_numActionPerformedHandler
 
@@ -430,29 +430,29 @@ public class SimpleCalculator extends JFrame {
         command = evt.getActionCommand();
         previousCommand = operation.getText();
 
-        if("".equals(orig) || orig.charAt(orig.length() - 1) == 'E'){
-            if("-".equals(command)) value.setText(orig + '-');
-            else if(!"=".equals(command)) operation.setText(command);
+        if ("".equals(orig) || orig.charAt(orig.length() - 1) == 'E') {
+            if ("-".equals(command)) value.setText(orig + '-');
+            else if (!"=".equals(command)) operation.setText(command);
             return;
         }
 
-        if(orig.charAt(orig.length() - 1) == '-'){
-            if(!"=".equals(command)) operation.setText(command);
+        if (orig.charAt(orig.length() - 1) == '-') {
+            if (!"=".equals(command)) operation.setText(command);
             return;
         }
 
-        try{
+        try {
             previousValue = Double.parseDouble(storedValue.getText());
             currentValue = Double.parseDouble(orig);
         }
-        catch(NumberFormatException nfe){
+        catch (NumberFormatException nfe) {
             JOptionPane.showMessageDialog(this, "Invalid Number!\nPress C to clear the input.");
             return;
         }
 
         value.setText("");
 
-        switch(previousCommand){
+        switch (previousCommand) {
         case "+":
             previousValue += currentValue;
             break;
@@ -479,7 +479,7 @@ public class SimpleCalculator extends JFrame {
         operation.setText(command);
         storedValue.setText(String.valueOf(previousValue));
 
-        if("=".equals(command)) value.setText(String.valueOf(previousValue));
+        if ("=".equals(command)) value.setText(String.valueOf(previousValue));
     }//GEN-LAST:event_calculationActionPerformedHandler
 
     private void plafItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_plafItemStateChanged

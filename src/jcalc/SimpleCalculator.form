@@ -29,64 +29,64 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Component id="plaf" max="32767" attributes="0"/>
+                  <Component id="themeComboBox" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="storedValue" min="-2" pref="154" max="-2" attributes="0"/>
+                      <Component id="storedValueLabel" min="-2" pref="154" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="operation" max="32767" attributes="0"/>
+                      <Component id="operationLabel" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="calculate" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="calculateButton" linkSize="1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="clear" linkSize="1" max="32767" attributes="0"/>
+                          <Component id="clearButton" linkSize="1" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="power" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="powerButton" linkSize="1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="root" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="rootButton" linkSize="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="value" min="-2" pref="119" max="-2" attributes="0"/>
+                          <Component id="valueField" min="-2" pref="119" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="eraseToLeft" min="-2" max="-2" attributes="0"/>
+                          <Component id="backspaceButton" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="num4" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="num4Button" linkSize="1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="num5" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="num5Button" linkSize="1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="num6" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="num6Button" linkSize="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="num7" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="num7Button" linkSize="1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="num8" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="num8Button" linkSize="1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="num9" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="num9Button" linkSize="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="num1" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="num1Button" linkSize="1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="num2" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="num2Button" linkSize="1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="num3" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="num3Button" linkSize="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="exponentConstant" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="exponentConstantButton" linkSize="1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="num0" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="num0Button" linkSize="1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="decimalPoint" linkSize="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="decimalPointButton" linkSize="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="add" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="sub" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="mul" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="div" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="additionButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="subtractButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="multiplicationButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="divisionButton" linkSize="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -100,112 +100,86 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="operation" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="storedValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="operationLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="storedValueLabel" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="value" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="eraseToLeft" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="valueField" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="backspaceButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="calculate" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="power" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="root" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="clear" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="calculateButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="powerButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="rootButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="clearButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="num1" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="num2" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="num3" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="add" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="num1Button" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="num2Button" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="num3Button" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="additionButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="num4" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="num5" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="num6" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="sub" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="num4Button" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="num5Button" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="num6Button" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="subtractButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="num7" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="num8" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="num9" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="mul" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="num7Button" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="num8Button" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="num9Button" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="multiplicationButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="num0" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="div" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="decimalPoint" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="exponentConstant" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="num0Button" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="divisionButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="decimalPointButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="exponentConstantButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="plaf" min="-2" max="-2" attributes="0"/>
+              <Component id="themeComboBox" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="eraseToLeft">
+    <Component class="javax.swing.JLabel" name="storedValueLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0.0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="operationLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="="/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="valueField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="valueFieldKeyTyped"/>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="valueFieldKeyPressed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="backspaceButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x232b;"/>
         <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eraseToLeftActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backspaceButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="num5">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="5"/>
-        <Property name="focusable" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="clear">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="c"/>
-        <Property name="focusable" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="num4">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="4"/>
-        <Property name="focusable" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="sub">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="-"/>
-        <Property name="focusable" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="decimalPoint">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="."/>
-        <Property name="focusable" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="decimalPointActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="num0">
+    <Component class="javax.swing.JButton" name="num0Button">
       <Properties>
         <Property name="text" type="java.lang.String" value="0"/>
         <Property name="focusable" type="boolean" value="false"/>
@@ -214,34 +188,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="calculate">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="="/>
-        <Property name="focusable" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="num3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="3"/>
-        <Property name="focusable" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="num8">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="8"/>
-        <Property name="focusable" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="num1">
+    <Component class="javax.swing.JButton" name="num1Button">
       <Properties>
         <Property name="text" type="java.lang.String" value="1"/>
         <Property name="focusable" type="boolean" value="false"/>
@@ -250,52 +197,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="value">
-      <Properties>
-        <Property name="editable" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="valueKeyTyped"/>
-        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="valueKeyPressed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="num9">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="9"/>
-        <Property name="focusable" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="power">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="^"/>
-        <Property name="focusable" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="exponentConstant">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="E"/>
-        <Property name="focusable" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exponentConstantActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="num6">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="6"/>
-        <Property name="focusable" type="boolean" value="false"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="num2">
+    <Component class="javax.swing.JButton" name="num2Button">
       <Properties>
         <Property name="text" type="java.lang.String" value="2"/>
         <Property name="focusable" type="boolean" value="false"/>
@@ -304,30 +206,43 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="root">
+    <Component class="javax.swing.JButton" name="num3Button">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#x221a;"/>
+        <Property name="text" type="java.lang.String" value="3"/>
         <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="storedValue">
+    <Component class="javax.swing.JButton" name="num4Button">
       <Properties>
-        <Property name="text" type="java.lang.String" value="0.0"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="mul">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#x2715;"/>
+        <Property name="text" type="java.lang.String" value="4"/>
         <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="num7">
+    <Component class="javax.swing.JButton" name="num5Button">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="5"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="num6Button">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="6"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="num7Button">
       <Properties>
         <Property name="text" type="java.lang.String" value="7"/>
         <Property name="focusable" type="boolean" value="false"/>
@@ -336,16 +251,43 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="div">
+    <Component class="javax.swing.JButton" name="num8Button">
       <Properties>
-        <Property name="text" type="java.lang.String" value="/"/>
+        <Property name="text" type="java.lang.String" value="8"/>
         <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="add">
+    <Component class="javax.swing.JButton" name="num9Button">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="9"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="numActionPerformedHandler"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="decimalPointButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="."/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="decimalPointButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="exponentConstantButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="E"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exponentConstantButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="additionButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="+"/>
         <Property name="focusable" type="boolean" value="false"/>
@@ -354,18 +296,76 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="operation">
+    <Component class="javax.swing.JButton" name="subtractButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="multiplicationButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x2715;"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="divisionButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="/"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="powerButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="^"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="rootButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x221a;"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="calculateButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="="/>
+        <Property name="focusable" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="plaf">
+    <Component class="javax.swing.JButton" name="clearButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="c"/>
+        <Property name="focusable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="themeComboBox">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value="Look and Feel"/>
         <Property name="focusable" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="plafItemStateChanged"/>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="themeComboBoxItemStateChanged"/>
       </Events>
     </Component>
   </SubComponents>

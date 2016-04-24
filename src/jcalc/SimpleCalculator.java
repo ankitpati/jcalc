@@ -27,10 +27,10 @@ public class SimpleCalculator extends JFrame {
 
     public SimpleCalculator() {
         initComponents();
-        getRootPane().setDefaultButton(calculate);
+        getRootPane().setDefaultButton(calculateButton);
         SwingUtilities.invokeLater(() -> {
-            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) plaf.addItem(info.getName());
-            plaf.setSelectedItem("Nimbus");
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) themeComboBox.addItem(info.getName());
+            themeComboBox.setSelectedItem("Nimbus");
             setLocationRelativeTo(null);
             setVisible(true);
         });
@@ -45,224 +45,224 @@ public class SimpleCalculator extends JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        eraseToLeft = new javax.swing.JButton();
-        num5 = new javax.swing.JButton();
-        clear = new javax.swing.JButton();
-        num4 = new javax.swing.JButton();
-        sub = new javax.swing.JButton();
-        decimalPoint = new javax.swing.JButton();
-        num0 = new javax.swing.JButton();
-        calculate = new javax.swing.JButton();
-        num3 = new javax.swing.JButton();
-        num8 = new javax.swing.JButton();
-        num1 = new javax.swing.JButton();
-        value = new javax.swing.JTextField();
-        num9 = new javax.swing.JButton();
-        power = new javax.swing.JButton();
-        exponentConstant = new javax.swing.JButton();
-        num6 = new javax.swing.JButton();
-        num2 = new javax.swing.JButton();
-        root = new javax.swing.JButton();
-        storedValue = new javax.swing.JLabel();
-        mul = new javax.swing.JButton();
-        num7 = new javax.swing.JButton();
-        div = new javax.swing.JButton();
-        add = new javax.swing.JButton();
-        operation = new javax.swing.JLabel();
-        plaf = new javax.swing.JComboBox();
+        storedValueLabel = new javax.swing.JLabel();
+        operationLabel = new javax.swing.JLabel();
+        valueField = new javax.swing.JTextField();
+        backspaceButton = new javax.swing.JButton();
+        num0Button = new javax.swing.JButton();
+        num1Button = new javax.swing.JButton();
+        num2Button = new javax.swing.JButton();
+        num3Button = new javax.swing.JButton();
+        num4Button = new javax.swing.JButton();
+        num5Button = new javax.swing.JButton();
+        num6Button = new javax.swing.JButton();
+        num7Button = new javax.swing.JButton();
+        num8Button = new javax.swing.JButton();
+        num9Button = new javax.swing.JButton();
+        decimalPointButton = new javax.swing.JButton();
+        exponentConstantButton = new javax.swing.JButton();
+        additionButton = new javax.swing.JButton();
+        subtractButton = new javax.swing.JButton();
+        multiplicationButton = new javax.swing.JButton();
+        divisionButton = new javax.swing.JButton();
+        powerButton = new javax.swing.JButton();
+        rootButton = new javax.swing.JButton();
+        calculateButton = new javax.swing.JButton();
+        clearButton = new javax.swing.JButton();
+        themeComboBox = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
         setAlwaysOnTop(true);
         setResizable(false);
 
-        eraseToLeft.setText("⌫");
-        eraseToLeft.setFocusable(false);
-        eraseToLeft.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eraseToLeftActionPerformed(evt);
-            }
-        });
+        storedValueLabel.setText("0.0");
 
-        num5.setText("5");
-        num5.setFocusable(false);
-        num5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numActionPerformedHandler(evt);
-            }
-        });
+        operationLabel.setText("=");
 
-        clear.setText("c");
-        clear.setFocusable(false);
-        clear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearActionPerformed(evt);
-            }
-        });
-
-        num4.setText("4");
-        num4.setFocusable(false);
-        num4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numActionPerformedHandler(evt);
-            }
-        });
-
-        sub.setText("-");
-        sub.setFocusable(false);
-        sub.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calculationActionPerformedHandler(evt);
-            }
-        });
-
-        decimalPoint.setText(".");
-        decimalPoint.setFocusable(false);
-        decimalPoint.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                decimalPointActionPerformed(evt);
-            }
-        });
-
-        num0.setText("0");
-        num0.setFocusable(false);
-        num0.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numActionPerformedHandler(evt);
-            }
-        });
-
-        calculate.setText("=");
-        calculate.setFocusable(false);
-        calculate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calculationActionPerformedHandler(evt);
-            }
-        });
-
-        num3.setText("3");
-        num3.setFocusable(false);
-        num3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numActionPerformedHandler(evt);
-            }
-        });
-
-        num8.setText("8");
-        num8.setFocusable(false);
-        num8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numActionPerformedHandler(evt);
-            }
-        });
-
-        num1.setText("1");
-        num1.setFocusable(false);
-        num1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numActionPerformedHandler(evt);
-            }
-        });
-
-        value.setEditable(false);
-        value.addKeyListener(new java.awt.event.KeyAdapter() {
+        valueField.setEditable(false);
+        valueField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                valueKeyTyped(evt);
+                valueFieldKeyTyped(evt);
             }
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                valueKeyPressed(evt);
+                valueFieldKeyPressed(evt);
             }
         });
 
-        num9.setText("9");
-        num9.setFocusable(false);
-        num9.addActionListener(new java.awt.event.ActionListener() {
+        backspaceButton.setText("⌫");
+        backspaceButton.setFocusable(false);
+        backspaceButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backspaceButtonActionPerformed(evt);
+            }
+        });
+
+        num0Button.setText("0");
+        num0Button.setFocusable(false);
+        num0Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numActionPerformedHandler(evt);
             }
         });
 
-        power.setText("^");
-        power.setFocusable(false);
-        power.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calculationActionPerformedHandler(evt);
-            }
-        });
-
-        exponentConstant.setText("E");
-        exponentConstant.setFocusable(false);
-        exponentConstant.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exponentConstantActionPerformed(evt);
-            }
-        });
-
-        num6.setText("6");
-        num6.setFocusable(false);
-        num6.addActionListener(new java.awt.event.ActionListener() {
+        num1Button.setText("1");
+        num1Button.setFocusable(false);
+        num1Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numActionPerformedHandler(evt);
             }
         });
 
-        num2.setText("2");
-        num2.setFocusable(false);
-        num2.addActionListener(new java.awt.event.ActionListener() {
+        num2Button.setText("2");
+        num2Button.setFocusable(false);
+        num2Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numActionPerformedHandler(evt);
             }
         });
 
-        root.setText("√");
-        root.setFocusable(false);
-        root.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calculationActionPerformedHandler(evt);
-            }
-        });
-
-        storedValue.setText("0.0");
-
-        mul.setText("✕");
-        mul.setFocusable(false);
-        mul.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calculationActionPerformedHandler(evt);
-            }
-        });
-
-        num7.setText("7");
-        num7.setFocusable(false);
-        num7.addActionListener(new java.awt.event.ActionListener() {
+        num3Button.setText("3");
+        num3Button.setFocusable(false);
+        num3Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numActionPerformedHandler(evt);
             }
         });
 
-        div.setText("/");
-        div.setFocusable(false);
-        div.addActionListener(new java.awt.event.ActionListener() {
+        num4Button.setText("4");
+        num4Button.setFocusable(false);
+        num4Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numActionPerformedHandler(evt);
+            }
+        });
+
+        num5Button.setText("5");
+        num5Button.setFocusable(false);
+        num5Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numActionPerformedHandler(evt);
+            }
+        });
+
+        num6Button.setText("6");
+        num6Button.setFocusable(false);
+        num6Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numActionPerformedHandler(evt);
+            }
+        });
+
+        num7Button.setText("7");
+        num7Button.setFocusable(false);
+        num7Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numActionPerformedHandler(evt);
+            }
+        });
+
+        num8Button.setText("8");
+        num8Button.setFocusable(false);
+        num8Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numActionPerformedHandler(evt);
+            }
+        });
+
+        num9Button.setText("9");
+        num9Button.setFocusable(false);
+        num9Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numActionPerformedHandler(evt);
+            }
+        });
+
+        decimalPointButton.setText(".");
+        decimalPointButton.setFocusable(false);
+        decimalPointButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                decimalPointButtonActionPerformed(evt);
+            }
+        });
+
+        exponentConstantButton.setText("E");
+        exponentConstantButton.setFocusable(false);
+        exponentConstantButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exponentConstantButtonActionPerformed(evt);
+            }
+        });
+
+        additionButton.setText("+");
+        additionButton.setFocusable(false);
+        additionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calculationActionPerformedHandler(evt);
             }
         });
 
-        add.setText("+");
-        add.setFocusable(false);
-        add.addActionListener(new java.awt.event.ActionListener() {
+        subtractButton.setText("-");
+        subtractButton.setFocusable(false);
+        subtractButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calculationActionPerformedHandler(evt);
             }
         });
 
-        operation.setText("=");
+        multiplicationButton.setText("✕");
+        multiplicationButton.setFocusable(false);
+        multiplicationButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calculationActionPerformedHandler(evt);
+            }
+        });
 
-        plaf.setToolTipText("Look and Feel");
-        plaf.setFocusable(false);
-        plaf.addItemListener(new java.awt.event.ItemListener() {
+        divisionButton.setText("/");
+        divisionButton.setFocusable(false);
+        divisionButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calculationActionPerformedHandler(evt);
+            }
+        });
+
+        powerButton.setText("^");
+        powerButton.setFocusable(false);
+        powerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calculationActionPerformedHandler(evt);
+            }
+        });
+
+        rootButton.setText("√");
+        rootButton.setFocusable(false);
+        rootButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calculationActionPerformedHandler(evt);
+            }
+        });
+
+        calculateButton.setText("=");
+        calculateButton.setFocusable(false);
+        calculateButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calculationActionPerformedHandler(evt);
+            }
+        });
+
+        clearButton.setText("c");
+        clearButton.setFocusable(false);
+        clearButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearButtonActionPerformed(evt);
+            }
+        });
+
+        themeComboBox.setToolTipText("Look and Feel");
+        themeComboBox.setFocusable(false);
+        themeComboBox.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                plafItemStateChanged(evt);
+                themeComboBoxItemStateChanged(evt);
             }
         });
 
@@ -273,176 +273,176 @@ public class SimpleCalculator extends JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(plaf, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(themeComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(storedValue, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(storedValueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(operation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(operationLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(calculate)
+                            .addComponent(calculateButton)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(clear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(clearButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(power)
+                            .addComponent(powerButton)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(root))
+                            .addComponent(rootButton))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(value, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(valueField, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(eraseToLeft))
+                            .addComponent(backspaceButton))
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(num4)
+                                    .addComponent(num4Button)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(num5)
+                                    .addComponent(num5Button)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(num6))
+                                    .addComponent(num6Button))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(num7)
+                                    .addComponent(num7Button)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(num8)
+                                    .addComponent(num8Button)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(num9))
+                                    .addComponent(num9Button))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(num1)
+                                    .addComponent(num1Button)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(num2)
+                                    .addComponent(num2Button)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(num3))
+                                    .addComponent(num3Button))
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(exponentConstant)
+                                    .addComponent(exponentConstantButton)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(num0)
+                                    .addComponent(num0Button)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(decimalPoint)))
+                                    .addComponent(decimalPointButton)))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(add)
-                                .addComponent(sub)
-                                .addComponent(mul)
-                                .addComponent(div)))))
+                                .addComponent(additionButton)
+                                .addComponent(subtractButton)
+                                .addComponent(multiplicationButton)
+                                .addComponent(divisionButton)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {add, calculate, clear, decimalPoint, div, exponentConstant, mul, num0, num1, num2, num3, num4, num5, num6, num7, num8, num9, power, root, sub});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {additionButton, calculateButton, clearButton, decimalPointButton, divisionButton, exponentConstantButton, multiplicationButton, num0Button, num1Button, num2Button, num3Button, num4Button, num5Button, num6Button, num7Button, num8Button, num9Button, powerButton, rootButton, subtractButton});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(operation)
-                    .addComponent(storedValue))
+                    .addComponent(operationLabel)
+                    .addComponent(storedValueLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(eraseToLeft))
+                    .addComponent(valueField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(backspaceButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(calculate)
-                    .addComponent(power)
-                    .addComponent(root)
-                    .addComponent(clear))
+                    .addComponent(calculateButton)
+                    .addComponent(powerButton)
+                    .addComponent(rootButton)
+                    .addComponent(clearButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(num1)
-                    .addComponent(num2)
-                    .addComponent(num3)
-                    .addComponent(add))
+                    .addComponent(num1Button)
+                    .addComponent(num2Button)
+                    .addComponent(num3Button)
+                    .addComponent(additionButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(num4)
-                    .addComponent(num5)
-                    .addComponent(num6)
-                    .addComponent(sub))
+                    .addComponent(num4Button)
+                    .addComponent(num5Button)
+                    .addComponent(num6Button)
+                    .addComponent(subtractButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(num7)
-                    .addComponent(num8)
-                    .addComponent(num9)
-                    .addComponent(mul))
+                    .addComponent(num7Button)
+                    .addComponent(num8Button)
+                    .addComponent(num9Button)
+                    .addComponent(multiplicationButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(num0)
-                    .addComponent(div)
-                    .addComponent(decimalPoint)
-                    .addComponent(exponentConstant))
+                    .addComponent(num0Button)
+                    .addComponent(divisionButton)
+                    .addComponent(decimalPointButton)
+                    .addComponent(exponentConstantButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(plaf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(themeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {add, calculate, clear, decimalPoint, div, exponentConstant, mul, num0, num1, num2, num3, num4, num5, num6, num7, num8, num9, power, root, sub, value});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {additionButton, calculateButton, clearButton, decimalPointButton, divisionButton, exponentConstantButton, multiplicationButton, num0Button, num1Button, num2Button, num3Button, num4Button, num5Button, num6Button, num7Button, num8Button, num9Button, powerButton, rootButton, subtractButton, valueField});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
-        value.setText("");
-        storedValue.setText("0.0");
-        operation.setText("=");
-    }//GEN-LAST:event_clearActionPerformed
+    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
+        valueField.setText("");
+        storedValueLabel.setText("0.0");
+        operationLabel.setText("=");
+    }//GEN-LAST:event_clearButtonActionPerformed
 
-    private void decimalPointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decimalPointActionPerformed
+    private void decimalPointButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decimalPointButtonActionPerformed
         int i;
         String orig;
 
-        orig = value.getText();
+        orig = valueField.getText();
 
         if (orig.contains(".") || orig.contains("E")) return;
-        if (orig.contains("I") || orig.contains("N")) value.setText(orig = "");
+        if (orig.contains("I") || orig.contains("N")) valueField.setText(orig = "");
         /* Checking for these letters because
             E = Exponent
             I = Infinity
             N = NaN
         */
 
-        value.setText(orig + '.');
-    }//GEN-LAST:event_decimalPointActionPerformed
+        valueField.setText(orig + '.');
+    }//GEN-LAST:event_decimalPointButtonActionPerformed
 
-    private void eraseToLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eraseToLeftActionPerformed
+    private void backspaceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backspaceButtonActionPerformed
         String orig;
-        orig = value.getText();
+        orig = valueField.getText();
         if (orig.length() == 0) return;
-        value.setText(orig.substring(0, orig.length() - 1));
-    }//GEN-LAST:event_eraseToLeftActionPerformed
+        valueField.setText(orig.substring(0, orig.length() - 1));
+    }//GEN-LAST:event_backspaceButtonActionPerformed
 
-    private void exponentConstantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exponentConstantActionPerformed
+    private void exponentConstantButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exponentConstantButtonActionPerformed
         int i;
         String orig;
-        orig = value.getText();
+        orig = valueField.getText();
         if ("".equals(orig) || "-".equals(orig) || orig.contains("I") || orig.contains("N")) return;
-        if (!orig.contains("E")) value.setText(orig + 'E');
-    }//GEN-LAST:event_exponentConstantActionPerformed
+        if (!orig.contains("E")) valueField.setText(orig + 'E');
+    }//GEN-LAST:event_exponentConstantButtonActionPerformed
 
     private void numActionPerformedHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numActionPerformedHandler
-        if (value.getText().contains("I") || value.getText().contains("N")) value.setText("");
-        value.setText(value.getText() + evt.getActionCommand());
+        if (valueField.getText().contains("I") || valueField.getText().contains("N")) valueField.setText("");
+        valueField.setText(valueField.getText() + evt.getActionCommand());
     }//GEN-LAST:event_numActionPerformedHandler
 
     private void calculationActionPerformedHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculationActionPerformedHandler
         double previousValue, currentValue;
         String orig, command, previousCommand;
 
-        orig = value.getText();
+        orig = valueField.getText();
         command = evt.getActionCommand();
-        previousCommand = operation.getText();
+        previousCommand = operationLabel.getText();
 
         if ("".equals(orig) || orig.charAt(orig.length() - 1) == 'E') {
-            if ("-".equals(command)) value.setText(orig + '-');
-            else if (!"=".equals(command)) operation.setText(command);
+            if ("-".equals(command)) valueField.setText(orig + '-');
+            else if (!"=".equals(command)) operationLabel.setText(command);
             return;
         }
 
         if (orig.charAt(orig.length() - 1) == '-') {
-            if (!"=".equals(command)) operation.setText(command);
+            if (!"=".equals(command)) operationLabel.setText(command);
             return;
         }
 
         try {
-            previousValue = Double.parseDouble(storedValue.getText());
+            previousValue = Double.parseDouble(storedValueLabel.getText());
             currentValue = Double.parseDouble(orig);
         }
         catch (NumberFormatException nfe) {
@@ -450,7 +450,7 @@ public class SimpleCalculator extends JFrame {
             return;
         }
 
-        value.setText("");
+        valueField.setText("");
 
         switch (previousCommand) {
         case "+":
@@ -476,17 +476,17 @@ public class SimpleCalculator extends JFrame {
             break;
         }
 
-        operation.setText(command);
-        storedValue.setText(String.valueOf(previousValue));
+        operationLabel.setText(command);
+        storedValueLabel.setText(String.valueOf(previousValue));
 
-        if ("=".equals(command)) value.setText(String.valueOf(previousValue));
+        if ("=".equals(command)) valueField.setText(String.valueOf(previousValue));
     }//GEN-LAST:event_calculationActionPerformedHandler
 
-    private void plafItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_plafItemStateChanged
+    private void themeComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_themeComboBoxItemStateChanged
         SwingUtilities.invokeLater(() -> {
             try {
                 for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels())
-                    if (plaf.getSelectedItem().equals(info.getName())) {
+                    if (themeComboBox.getSelectedItem().equals(info.getName())) {
                         UIManager.setLookAndFeel(info.getClassName());
                         break;
                     }
@@ -495,128 +495,128 @@ public class SimpleCalculator extends JFrame {
                 setLocationRelativeTo(null);
             }
             catch (Exception ex) {
-                System.err.println("Cannot set "+plaf.getSelectedItem()+" theme.");
+                System.err.println("Cannot set "+themeComboBox.getSelectedItem()+" theme.");
             }
         });
-    }//GEN-LAST:event_plafItemStateChanged
+    }//GEN-LAST:event_themeComboBoxItemStateChanged
 
-    private void valueKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_valueKeyTyped
+    private void valueFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_valueFieldKeyTyped
         switch (evt.getKeyChar()) {
         case '1':
-            num1.doClick();
+            num1Button.doClick();
             break;
         case '2':
-            num2.doClick();
+            num2Button.doClick();
             break;
         case '3':
-            num3.doClick();
+            num3Button.doClick();
             break;
         case '4':
-            num4.doClick();
+            num4Button.doClick();
             break;
         case '5':
-            num5.doClick();
+            num5Button.doClick();
             break;
         case '6':
-            num6.doClick();
+            num6Button.doClick();
             break;
         case '7':
-            num8.doClick();
+            num8Button.doClick();
             break;
         case '8':
-            num8.doClick();
+            num8Button.doClick();
             break;
         case '9':
-            num9.doClick();
+            num9Button.doClick();
             break;
         case '0':
-            num0.doClick();
+            num0Button.doClick();
             break;
         case '.':
-            decimalPoint.doClick();
+            decimalPointButton.doClick();
             break;
         case 'e':   /* intended fall-through */
         case 'E':
-            exponentConstant.doClick();
+            exponentConstantButton.doClick();
             break;
         case '=':
-            calculate.doClick();
+            calculateButton.doClick();
             break;
         case '\b':
-            eraseToLeft.doClick();
+            backspaceButton.doClick();
             break;
         case 'c':   /* intended fall-through */
         case 'C':
-            clear.doClick();
+            clearButton.doClick();
             break;
         case '+':
-            add.doClick();
+            additionButton.doClick();
             break;
         case '-':
-            sub.doClick();
+            subtractButton.doClick();
             break;
         case '*':   /* intended fall-through */
         case 'x':
         case 'X':
-            mul.doClick();
+            multiplicationButton.doClick();
             break;
         case '/':
-            div.doClick();
+            divisionButton.doClick();
             break;
         case '^':
-            power.doClick();
+            powerButton.doClick();
             break;
         case 'r':
-            root.doClick();
+            rootButton.doClick();
             break;
         default:
             break;
         }
-    }//GEN-LAST:event_valueKeyTyped
+    }//GEN-LAST:event_valueFieldKeyTyped
 
-    private void valueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_valueKeyPressed
+    private void valueFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_valueFieldKeyPressed
         switch (evt.getKeyCode()) {
         case KeyEvent.VK_UP:
-            plaf.setSelectedIndex((plaf.getSelectedIndex() == 0 ? plaf.getItemCount() : plaf.getSelectedIndex()) - 1);
+            themeComboBox.setSelectedIndex((themeComboBox.getSelectedIndex() == 0 ? themeComboBox.getItemCount() : themeComboBox.getSelectedIndex()) - 1);
             break;
         case KeyEvent.VK_DOWN:
-            plaf.setSelectedIndex(plaf.getSelectedIndex() == plaf.getItemCount() - 1 ? 0 : plaf.getSelectedIndex() + 1);
+            themeComboBox.setSelectedIndex(themeComboBox.getSelectedIndex() == themeComboBox.getItemCount() - 1 ? 0 : themeComboBox.getSelectedIndex() + 1);
             break;
         default:
             break;
         }
-    }//GEN-LAST:event_valueKeyPressed
+    }//GEN-LAST:event_valueFieldKeyPressed
 
     public static void main(String args[]) {
         SimpleCalculator sc = new SimpleCalculator();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton add;
-    private javax.swing.JButton calculate;
-    private javax.swing.JButton clear;
-    private javax.swing.JButton decimalPoint;
-    private javax.swing.JButton div;
-    private javax.swing.JButton eraseToLeft;
-    private javax.swing.JButton exponentConstant;
-    private javax.swing.JButton mul;
-    private javax.swing.JButton num0;
-    private javax.swing.JButton num1;
-    private javax.swing.JButton num2;
-    private javax.swing.JButton num3;
-    private javax.swing.JButton num4;
-    private javax.swing.JButton num5;
-    private javax.swing.JButton num6;
-    private javax.swing.JButton num7;
-    private javax.swing.JButton num8;
-    private javax.swing.JButton num9;
-    private javax.swing.JLabel operation;
-    private javax.swing.JComboBox plaf;
-    private javax.swing.JButton power;
-    private javax.swing.JButton root;
-    private javax.swing.JLabel storedValue;
-    private javax.swing.JButton sub;
-    private javax.swing.JTextField value;
+    private javax.swing.JButton additionButton;
+    private javax.swing.JButton backspaceButton;
+    private javax.swing.JButton calculateButton;
+    private javax.swing.JButton clearButton;
+    private javax.swing.JButton decimalPointButton;
+    private javax.swing.JButton divisionButton;
+    private javax.swing.JButton exponentConstantButton;
+    private javax.swing.JButton multiplicationButton;
+    private javax.swing.JButton num0Button;
+    private javax.swing.JButton num1Button;
+    private javax.swing.JButton num2Button;
+    private javax.swing.JButton num3Button;
+    private javax.swing.JButton num4Button;
+    private javax.swing.JButton num5Button;
+    private javax.swing.JButton num6Button;
+    private javax.swing.JButton num7Button;
+    private javax.swing.JButton num8Button;
+    private javax.swing.JButton num9Button;
+    private javax.swing.JLabel operationLabel;
+    private javax.swing.JButton powerButton;
+    private javax.swing.JButton rootButton;
+    private javax.swing.JLabel storedValueLabel;
+    private javax.swing.JButton subtractButton;
+    private javax.swing.JComboBox themeComboBox;
+    private javax.swing.JTextField valueField;
     // End of variables declaration//GEN-END:variables
 }
 /* end of SimpleCalculator.java */

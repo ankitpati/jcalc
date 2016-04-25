@@ -19,6 +19,7 @@
 
 package jcalc;
 
+import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -484,6 +485,8 @@ public class SimpleCalculator extends JFrame {
 
     private void themeComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_themeComboBoxItemStateChanged
         SwingUtilities.invokeLater(() -> {
+            Point frameLocation;
+            frameLocation = getLocation();
             try {
                 for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels())
                     if (themeComboBox.getSelectedItem().equals(info.getName())) {
@@ -492,11 +495,11 @@ public class SimpleCalculator extends JFrame {
                     }
                 SwingUtilities.updateComponentTreeUI(this);
                 pack();
-                setLocationRelativeTo(null);
             }
             catch (Exception ex) {
                 System.err.println("Cannot set "+themeComboBox.getSelectedItem()+" theme.");
             }
+            setLocation(frameLocation.x, frameLocation.y);
         });
     }//GEN-LAST:event_themeComboBoxItemStateChanged
 

@@ -387,7 +387,6 @@ public class SimpleCalculator extends JFrame {
     }//GEN-LAST:event_clearButtonActionPerformed
 
     private void decimalPointButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decimalPointButtonActionPerformed
-        int i;
         String orig;
 
         orig = valueField.getText();
@@ -591,7 +590,7 @@ public class SimpleCalculator extends JFrame {
     }//GEN-LAST:event_valueFieldKeyPressed
 
     public static void main(String args[]) {
-        SimpleCalculator sc = new SimpleCalculator();
+        new SimpleCalculator();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

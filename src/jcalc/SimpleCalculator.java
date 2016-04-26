@@ -410,7 +410,6 @@ public class SimpleCalculator extends JFrame {
     }//GEN-LAST:event_backspaceButtonActionPerformed
 
     private void exponentConstantButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exponentConstantButtonActionPerformed
-        int i;
         String orig;
         orig = valueField.getText();
         if ("".equals(orig) || "-".equals(orig) || orig.contains("I") || orig.contains("N")) return;

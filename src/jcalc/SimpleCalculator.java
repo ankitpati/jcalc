@@ -495,7 +495,7 @@ public class SimpleCalculator extends JFrame {
                 pack();
             }
             catch (Exception ex) {
-                System.err.println("Cannot set "+themeComboBox.getSelectedItem()+" theme.");
+                System.err.println("Cannot set " + themeComboBox.getSelectedItem() + " theme.");
             }
             setLocation(frameLocation);
         });

@@ -28,7 +28,9 @@ public class SimpleCalculator extends JFrame {
 
     public SimpleCalculator() {
         initComponents();
+
         getRootPane().setDefaultButton(calculateButton);
+
         SwingUtilities.invokeLater(() -> {
             for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) themeComboBox.addItem(info.getName());
             themeComboBox.setSelectedItem("Nimbus");

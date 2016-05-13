@@ -84,7 +84,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="additionButton" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="subtractButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="subtractionButton" linkSize="1" min="-2" max="-2" attributes="0"/>
                               <Component id="multiplicationButton" linkSize="1" min="-2" max="-2" attributes="0"/>
                               <Component id="divisionButton" linkSize="1" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -127,7 +127,7 @@
                   <Component id="num4Button" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="num5Button" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="num6Button" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="subtractButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="subtractionButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -296,7 +296,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculationActionPerformedHandler"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="subtractButton">
+    <Component class="javax.swing.JButton" name="subtractionButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="-"/>
         <Property name="focusable" type="boolean" value="false"/>

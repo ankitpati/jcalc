@@ -65,7 +65,7 @@ public class SimpleCalculator extends JFrame {
         decimalPointButton = new javax.swing.JButton();
         exponentConstantButton = new javax.swing.JButton();
         additionButton = new javax.swing.JButton();
-        subtractButton = new javax.swing.JButton();
+        subtractionButton = new javax.swing.JButton();
         multiplicationButton = new javax.swing.JButton();
         divisionButton = new javax.swing.JButton();
         powerButton = new javax.swing.JButton();
@@ -205,9 +205,9 @@ public class SimpleCalculator extends JFrame {
             }
         });
 
-        subtractButton.setText("-");
-        subtractButton.setFocusable(false);
-        subtractButton.addActionListener(new java.awt.event.ActionListener() {
+        subtractionButton.setText("-");
+        subtractionButton.setFocusable(false);
+        subtractionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calculationActionPerformedHandler(evt);
             }
@@ -323,13 +323,13 @@ public class SimpleCalculator extends JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(additionButton)
-                                .addComponent(subtractButton)
+                                .addComponent(subtractionButton)
                                 .addComponent(multiplicationButton)
                                 .addComponent(divisionButton)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {additionButton, calculateButton, clearButton, decimalPointButton, divisionButton, exponentConstantButton, multiplicationButton, num0Button, num1Button, num2Button, num3Button, num4Button, num5Button, num6Button, num7Button, num8Button, num9Button, powerButton, rootButton, subtractButton});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {additionButton, calculateButton, clearButton, decimalPointButton, divisionButton, exponentConstantButton, multiplicationButton, num0Button, num1Button, num2Button, num3Button, num4Button, num5Button, num6Button, num7Button, num8Button, num9Button, powerButton, rootButton, subtractionButton});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -359,7 +359,7 @@ public class SimpleCalculator extends JFrame {
                     .addComponent(num4Button)
                     .addComponent(num5Button)
                     .addComponent(num6Button)
-                    .addComponent(subtractButton))
+                    .addComponent(subtractionButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(num7Button)
@@ -377,7 +377,7 @@ public class SimpleCalculator extends JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {additionButton, calculateButton, clearButton, decimalPointButton, divisionButton, exponentConstantButton, multiplicationButton, num0Button, num1Button, num2Button, num3Button, num4Button, num5Button, num6Button, num7Button, num8Button, num9Button, powerButton, rootButton, subtractButton, valueField});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {additionButton, calculateButton, clearButton, decimalPointButton, divisionButton, exponentConstantButton, multiplicationButton, num0Button, num1Button, num2Button, num3Button, num4Button, num5Button, num6Button, num7Button, num8Button, num9Button, powerButton, rootButton, subtractionButton, valueField});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -556,7 +556,7 @@ public class SimpleCalculator extends JFrame {
             additionButton.doClick();
             break;
         case '-':
-            subtractButton.doClick();
+            subtractionButton.doClick();
             break;
         case '*':   /* intended fall-through */
         case 'x':
@@ -617,7 +617,7 @@ public class SimpleCalculator extends JFrame {
     private javax.swing.JButton powerButton;
     private javax.swing.JButton rootButton;
     private javax.swing.JLabel storedValueLabel;
-    private javax.swing.JButton subtractButton;
+    private javax.swing.JButton subtractionButton;
     private javax.swing.JComboBox themeComboBox;
     private javax.swing.JTextField valueField;
     // End of variables declaration//GEN-END:variables

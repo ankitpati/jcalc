@@ -32,7 +32,10 @@ public class SimpleCalculator extends JFrame {
         getRootPane().setDefaultButton(calculateButton);
 
         SwingUtilities.invokeLater(() -> {
-            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) themeComboBox.addItem(info.getName());
+            for (
+                UIManager.LookAndFeelInfo info :
+                UIManager.getInstalledLookAndFeels()
+            ) themeComboBox.addItem(info.getName());
             themeComboBox.setSelectedItem("Nimbus");
             setLocationRelativeTo(null);
             setVisible(true);
@@ -394,7 +397,8 @@ public class SimpleCalculator extends JFrame {
         orig = valueField.getText();
 
         if (orig.contains(".") || orig.contains("E")) return;
-        if (orig.contains("I") || orig.contains("N")) valueField.setText(orig = "");
+        if (orig.contains("I") || orig.contains("N"))
+            valueField.setText(orig = "");
         /* Checking for these letters because
             E = Exponent
             I = Infinity
@@ -414,12 +418,14 @@ public class SimpleCalculator extends JFrame {
     private void exponentConstantButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exponentConstantButtonActionPerformed
         String orig;
         orig = valueField.getText();
-        if ("".equals(orig) || "-".equals(orig) || orig.contains("I") || orig.contains("N")) return;
+        if ("".equals(orig) || "-".equals(orig) ||
+                               orig.contains("I") || orig.contains("N")) return;
         if (!orig.contains("E")) valueField.setText(orig + 'E');
     }//GEN-LAST:event_exponentConstantButtonActionPerformed
 
     private void numActionPerformedHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numActionPerformedHandler
-        if (valueField.getText().contains("I") || valueField.getText().contains("N")) valueField.setText("");
+        if (valueField.getText().contains("I") ||
+                     valueField.getText().contains("N")) valueField.setText("");
         valueField.setText(valueField.getText() + evt.getActionCommand());
     }//GEN-LAST:event_numActionPerformedHandler
 
@@ -447,7 +453,8 @@ public class SimpleCalculator extends JFrame {
             currentValue = Double.parseDouble(orig);
         }
         catch (NumberFormatException nfe) {
-            JOptionPane.showMessageDialog(this, "Invalid Number!\nPress C to clear the input.");
+            JOptionPane.showMessageDialog(
+                          this, "Invalid Number!\nPress C to clear the input.");
             return;
         }
 
@@ -480,7 +487,8 @@ public class SimpleCalculator extends JFrame {
         operationLabel.setText(command);
         storedValueLabel.setText(String.valueOf(previousValue));
 
-        if ("=".equals(command)) valueField.setText(String.valueOf(previousValue));
+        if ("=".equals(command))
+            valueField.setText(String.valueOf(previousValue));
     }//GEN-LAST:event_calculationActionPerformedHandler
 
     private void themeComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_themeComboBoxItemStateChanged
@@ -488,8 +496,9 @@ public class SimpleCalculator extends JFrame {
             Point frameLocation;
             frameLocation = getLocation();
             try {
-                for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels())
-                    if (themeComboBox.getSelectedItem().equals(info.getName())) {
+                for (UIManager.LookAndFeelInfo info :
+                                           UIManager.getInstalledLookAndFeels())
+                    if(themeComboBox.getSelectedItem().equals(info.getName())) {
                         UIManager.setLookAndFeel(info.getClassName());
                         break;
                     }
@@ -497,7 +506,9 @@ public class SimpleCalculator extends JFrame {
                 pack();
             }
             catch (Exception ex) {
-                System.err.println("Cannot set " + themeComboBox.getSelectedItem() + " theme.");
+                System.err.println(
+                    "Cannot set " + themeComboBox.getSelectedItem() + " theme."
+                );
             }
             setLocation(frameLocation);
         });
@@ -580,10 +591,17 @@ public class SimpleCalculator extends JFrame {
     private void valueFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_valueFieldKeyPressed
         switch (evt.getKeyCode()) {
         case KeyEvent.VK_UP:
-            themeComboBox.setSelectedIndex((themeComboBox.getSelectedIndex() == 0 ? themeComboBox.getItemCount() : themeComboBox.getSelectedIndex()) - 1);
+            themeComboBox.setSelectedIndex(
+                (themeComboBox.getSelectedIndex() == 0 ?
+                 themeComboBox.getItemCount() :
+                 themeComboBox.getSelectedIndex()) - 1
+            );
             break;
         case KeyEvent.VK_DOWN:
-            themeComboBox.setSelectedIndex(themeComboBox.getSelectedIndex() == themeComboBox.getItemCount() - 1 ? 0 : themeComboBox.getSelectedIndex() + 1);
+            themeComboBox.setSelectedIndex(
+                themeComboBox.getSelectedIndex() == themeComboBox.getItemCount()
+                                  - 1 ? 0 : themeComboBox.getSelectedIndex() + 1
+            );
             break;
         default:
             break;
